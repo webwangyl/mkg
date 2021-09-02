@@ -1,3 +1,11 @@
+<!--
+ * @Descripttion: your project
+ * @version: 1.0
+ * @Author: WangYuLin
+ * @Date: 2021-09-02 09:58:20
+ * @LastEditors: WangYuLin
+ * @LastEditTime: 2021-09-02 10:58:00
+-->
 # mkg
 
 ## Project setup
@@ -15,5 +23,8 @@ npm run serve
 npm run build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Introduce
+```
+
+cool first, other second
+```

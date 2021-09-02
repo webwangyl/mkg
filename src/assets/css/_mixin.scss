@@ -1,0 +1,66 @@
+/*
+ * @Descripttion: 混入样式
+ * @version: 1.0
+ * @Author: WangYuLin
+ * @Date: 2021-09-02 10:47:52
+ * @LastEditors: WangYuLin
+ * @LastEditTime: 2021-09-02 11:22:06
+ */
+/* 滚动条样式 */
+@mixin scrollBarStyle() {
+    &::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+
+    // 正常情况下滑块的样式
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.05);
+        box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1);
+        -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    // 正常时候的主干部分
+    &::-webkit-scrollbar-track {
+        border-radius: 10px;
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+        background-color: white;
+    }
+
+    // 鼠标悬浮在该类指向的控件上时滑块的样式
+    &:hover::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1);
+        -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1);
+
+    }
+
+    // 鼠标悬浮在滑块上时滑块的样式
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(0, 0, 0, 0.4);
+        box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1);
+        -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    // 鼠标悬浮在滚动条上的主干部分
+    &::-webkit-scrollbar-track:hover {
+        background-color: rgba(0, 0, 0, 0.01);
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
+
+    }
+}
+
+/* 字体样式 */
+@mixin fontFamily() {
+    font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YAHei', '微软雅黑', Arial, sans-serif;
+}
+
+/* 字体颜色 大小 */
+@mixin fontStyle($color:#606266, $size:16px) {
+    color: $color;
+    font-size: $size;
+}

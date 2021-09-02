@@ -1,0 +1,51 @@
+/*
+ * @Descripttion: 样式初始化
+ * @version: 1.0
+ * @Author: WangYuLin
+ * @Date: 2021-09-02 10:46:59
+ * @LastEditors: WangYuLin
+ * @LastEditTime: 2021-09-02 11:22:43
+ */
+@import './mixin.scss';
+
+* {
+    @include scrollBarStyle;
+
+    &,
+    &::before,
+    &::after {
+        box-sizing: border-box;
+        margin: 0;
+        letter-spacing: 1px;
+    }
+}
+
+html {
+    @include fontFamily;
+    @include fontStyle;
+
+    overflow-y: hidden;
+    overflow-x: auto;
+    word-spacing: 1px;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+
+textarea {
+    @include fontFamily;
+}
+
+a {
+    text-decoration: none
+}
+
+:focus {
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
