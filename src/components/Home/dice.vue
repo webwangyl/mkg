@@ -4,14 +4,18 @@
  * @Author: WangYuLin
  * @Date: 2021-09-02 10:54:00
  * @LastEditors: WangYuLin
- * @LastEditTime: 2021-09-02 11:51:12
+ * @LastEditTime: 2021-09-03 13:30:06
 -->
 <template>
 	<div class="component-dice" :style="diceStyle">
 		<div class="ct">
-			<div v-for="item in dices" :key="item" :class="`dice-${item}`">
-				{{ item }}
-			</div>
+			<div
+				v-for="item in dices"
+				:key="item"
+				:class="`dice-${item}`"
+			>
+        {{ item }}
+      </div>
 		</div>
 	</div>
 </template>
@@ -37,7 +41,7 @@ export default {
 				"--dice-tance": this.diceWidth + "px",
 				"--half-tance": this.diceWidth / 2 + "px",
 				"--fud-half": "-" + this.diceWidth / 2 + "px",
-        "--dice-radius": this.diceWidth / 10 + "px",
+				"--dice-radius": this.diceWidth / 10 + "px",
 			};
 		},
 	},
@@ -72,13 +76,13 @@ $transform-list: translateZ($half-tance) translateZ($fud-half)
 	div[class^="dice"] {
 		width: $dice-tance;
 		height: $dice-tance;
-		border: 1px solid red;
+		// border: 1px solid red;
 		position: absolute;
 		text-align: center;
 		line-height: $dice-tance;
 		box-shadow: 0 0 15px 0 #fff;
-    border-radius: $dice-radius;
-    color: #fff;
+		border-radius: $dice-radius;
+		color: #fff;
 	}
 	@for $i from 1 through 6 {
 		.dice-#{$i} {
